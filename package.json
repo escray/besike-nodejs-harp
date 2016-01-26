@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-harp",
+  "version": "1.0.0",
+  "bin": "./bin/mini-harp.js",
+  "description": "NodeJS course of the Express Way on sike.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/escray/besike-nodejs-harp.git"
+  },
+  "keywords": [
+    "harp"
+  ],
+  "author": "escray",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/escray/besike-nodejs-harp/issues"
+  },
+  "homepage": "https://github.com/escray/besike-nodejs-harp#readme",
+  "dependencies": {
+    "connect": "^3.0.1"
+  }
+}
