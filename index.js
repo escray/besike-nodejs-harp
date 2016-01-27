@@ -1,8 +1,10 @@
 connect = require('connect');
+serveServer = require('serve-static')
 
-function miniharp() {
-  console.log("miniharp");
-  var app = connect();
+function miniharp(root) {
+  //console.log(root);
+  var app = connect()
+    .use(serveServer(root));
   return app;
 };
 

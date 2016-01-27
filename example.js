@@ -1,6 +1,8 @@
-var createMiniHarp = require("./");
+var miniHarp = require("./");
 
-var app = createMiniHarp();
-console.log("Starting mini-harp on http://localhost:4000");
+var root = process.cwd();
+
+var app = miniHarp(root);
+
 app.listen(4000);
 

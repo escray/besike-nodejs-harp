@@ -4,6 +4,7 @@ createMiniHarp = require("../")
 var app = createMiniHarp();
 var argv = require('minimist')(process.argv.slice(2));
 var port = argv['port'];
+var serveStatic = require('serve-static');
 
 if (port == undefined)
   port = 4000;
