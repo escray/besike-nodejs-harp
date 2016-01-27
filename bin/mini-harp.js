@@ -1,9 +1,12 @@
 #!/usr/local/bin/node
 
 createMiniHarp = require("../")
-var app = createMiniHarp();
+console.log(process.cwd());
+var app = createMiniHarp(process.cwd());
 var argv = require('minimist')(process.argv.slice(2));
+
 var port = argv['port'];
+
 var serveStatic = require('serve-static');
 
 if (port == undefined)
