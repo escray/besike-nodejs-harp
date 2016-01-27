@@ -1,7 +1,10 @@
 {
   "name": "nodejs-harp",
   "version": "1.0.0",
-  "bin": "./bin/mini-harp.js",
+  "bin": {
+    "mini-harp": "./bin/mini-harp.js",
+    "greet": "./bin/greet.js"
+  },
   "description": "NodeJS course of the Express Way on sike.io",
   "main": "index.js",
   "scripts": {
@@ -22,5 +25,8 @@
   "homepage": "https://github.com/escray/besike-nodejs-harp#readme",
   "dependencies": {
     "connect": "^3.0.1"
+  },
+  "devDependencies": {
+    "minimist": "^1.2.0"
   }
 }
