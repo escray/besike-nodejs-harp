@@ -14,7 +14,11 @@ if (port == undefined)
 // need judge the port in used ? 
 if (port > 0 && port < 65535) {
   console.log("Starting mini-harp on http://localhost:" + port);
-  app.listen(port);  
+  app.use('/current-time', function(req, res, next) {
+    res.write((new Date()).toISOString());
+    res.end();
+    next();
+  }).listen(port);  
 }
 else {
   console.log("port is invalid");
