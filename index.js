@@ -1,5 +1,5 @@
 var connect = require('connect');
-var serveServer = require('serve-static');
+var serveStatic = require('serve-static');
 var url = require('url');
 var path = require('path');
 var jade = require("./lib/processor/jade.js");
@@ -19,10 +19,9 @@ function miniharp(root) {
       if ( path.extname(req.url) === '.less' 
         || path.extname(req.url) === '.jade') {        
         res.statusCode = 404;
-
         res.end('Not Found: ' + req.url, {
           'Content-Length': 100
-        });        
+        });
       } else {
         next();
       }
@@ -32,8 +31,7 @@ function miniharp(root) {
       res.end();
       next();
     })
-    .use(serveServer(root))
-
+    .use(serveStatic(root))
     .use(jade(root))
     .use(less(root));
   return app;
