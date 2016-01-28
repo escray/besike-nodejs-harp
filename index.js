@@ -19,7 +19,10 @@ function miniharp(root) {
       if ( path.extname(req.url) === '.less' 
         || path.extname(req.url) === '.jade') {        
         res.statusCode = 404;
-        res.end('Not Found: ' + req.url);        
+
+        res.end('Not Found: ' + req.url, {
+          'Content-Length': 100
+        });        
       } else {
         next();
       }
